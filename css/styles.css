@@ -646,7 +646,7 @@ img {
 display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 93px;
+    margin-left: auto;
 }
 .newsletter-form{
     display: flex;
@@ -732,28 +732,30 @@ fill: var(--svg-color);
 
 /*modal*/
 
-.backdrop{
+.backdrop {
     position: fixed;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     height: 1024px;
     left: 0px;
     top: 0px;
-    background: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition:
-    opacity 250ms, cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+        opacity 250ms, cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-window{
+
+.modal-window {
     height: 581px;
-        width: 528px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 221px;
-        background: var(--white-color);
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 4px;
-        position: relative;
+    width: 528px;
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .is-hidden{
     opacity: 0;
@@ -783,9 +785,9 @@ box-shadow: 0px 0px 15px var(--text-color-secondary)
 }
 .modal-text{
     font-family: Roboto;
-        font-size: 12px;
+
         font-weight: 400;
-        line-height: 14px;
+        line-height: calc(14/12);
         letter-spacing: 0.01em;
         color: var(--svg-color);
         margin-left: 40px;
@@ -803,7 +805,7 @@ display: flex;
     left:0;
     transform: translateY(-50%);
     margin-left: 55px;
-    margin-top: 18px;
+    margin-top: 23px;
 }
 
 #name,
@@ -812,13 +814,14 @@ display: flex;
 #comments{
     min-width: 448px;
     margin-left: 40px;
-    margin-right: 40px;
+ 
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     margin-bottom: 10px;
     padding-left: 40px;
     cursor: pointer;
+    margin-top: 4px;
 }
 #name:hover,
 #phone-number:hover,
@@ -832,9 +835,9 @@ display: flex;
 
 #comments{
     font-family: Roboto;
-        font-size: 12px;
+
         font-weight: 400;
-        line-height: 14px;
+        line-height: calc(14/12);
         letter-spacing: 0.01em;
         text-align: left;
         height: 120px;
@@ -847,13 +850,12 @@ left: 0;
 top: 0;
 }
 .form-title{
-    position: absolute;
-    width:443px;
     margin: 40px 40px 30px 40px;
+    max-width:448px;
     font-family: Roboto;
-        font-size: 20px;
         font-weight: 700;
         line-height: 23px;
+        font-size: 20px;
         letter-spacing: 0.03em;
         text-align: center;
 }
@@ -866,33 +868,10 @@ top: 0;
             
 }
 
-#terms-and-conditions{
-    display:none;
-}
 
 .form-icon{
     margin-right: 9px;
     display: block;
-}
-.checkbox-svg{
-    border: 2px solid var(--text-color-default);
-    border-radius: 4px;
-    background: var(--white-color);
-    box-sizing: content-box;
-    margin-top: -10px;
-    margin-right: 9px;
-    fill:transparent;
-}
-.checkbox-svg:hover,
-.checkbox-svg:focus,
-.checkbox-svg:active{
-    cursor: pointer;
-    fill: var(--white-color);
-    background-color: var(--highlight-color);
-border: 2px solid var(--highlight-color);
-border-radius: 4px;
-transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .send-button{
         font-family: Roboto;
@@ -906,12 +885,22 @@ transition-duration: 250ms;
         border: 1px solid var(--highlight-color);
         border-radius: 4px;
         min-width: 200px;
-        padding: 10px 80px;
+        padding: 10px 55px;
         margin-left: 164px;
     margin-top: 30px;
-    margin-bottom: 50px;
 }
 .send-button:hover,
 .send-button:focus{
     cursor: pointer;
+}
+
+/*t terms and conditions*/
+
+.terms-style{
+    font-family: Roboto;
+        font-weight: 400;
+        line-height: calc(24/14);
+        letter-spacing: 0.03em;
+        text-align: left;
+        color: rgba(117, 117, 117, 1);
 }
