@@ -785,13 +785,14 @@ box-shadow: 0px 0px 15px var(--text-color-secondary)
 }
 .modal-text{
     font-family: Roboto;
-
         font-weight: 400;
+        font-size: 12px;
         line-height: calc(14/12);
         letter-spacing: 0.01em;
         color: var(--svg-color);
         margin-left: 40px;
         margin-bottom: 4px;
+
 
     }
 
@@ -804,8 +805,8 @@ display: flex;
     top:0;
     left:0;
     transform: translateY(-50%);
-    margin-left: 55px;
-    margin-top: 23px;
+    margin-left: 50px;
+    margin-top: 19px;
 }
 
 #name,
@@ -814,12 +815,10 @@ display: flex;
 #comments{
     min-width: 448px;
     margin-left: 40px;
- 
-    height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     margin-bottom: 10px;
-    padding-left: 40px;
+    padding-left: 30px;
     cursor: pointer;
     margin-top: 4px;
 }
@@ -829,42 +828,43 @@ display: flex;
 #comments:hover {
         border: 1px solid var(--highlight-color);
         transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 #comments{
-    font-family: Roboto;
-
+        font-family: Roboto;
         font-weight: 400;
+        font-size: 12px;
         line-height: calc(14/12);
         letter-spacing: 0.01em;
         text-align: left;
         height: 120px;
         padding-left: 10px;
+        margin-bottom: 0;
 }
 .modal-form{
     position: absolute;
-margin-top: 93px;
-left: 0;
-top: 0;
+    margin-top: 93px;
+    left: 0;
+    top: 0;
 }
 .form-title{
     margin: 40px 40px 30px 40px;
     max-width:448px;
     font-family: Roboto;
-        font-weight: 700;
-        line-height: 23px;
-        font-size: 20px;
-        letter-spacing: 0.03em;
-        text-align: center;
+    font-weight: 700;
+    line-height: calc(23/20);
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    text-align: center;
 }
 .form-positioning:hover,
 .form-positioning:focus{
         cursor: pointer;
         fill: var(--highlight-color);
         transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             
 }
 
@@ -874,20 +874,21 @@ top: 0;
     display: block;
 }
 .send-button{
-        font-family: Roboto;
-            font-weight: 700;
-            line-height: calc(30/16);
-            letter-spacing: 0.06em;
-            text-align: center;
-            color: var(--white-color);
-            background: var(--highlight-color);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border: 1px solid var(--highlight-color);
-        border-radius: 4px;
-        min-width: 200px;
-        padding: 10px 55px;
-        margin-left: 164px;
-    margin-top: 30px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--white-color);
+    background: var(--highlight-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--highlight-color);
+    border-radius: 4px;
+    min-width: 200px;
+    padding: 10px 55px;
+    margin-left: 164px;
+    margin-bottom: 40px;
 }
 .send-button:hover,
 .send-button:focus{
@@ -899,8 +900,53 @@ top: 0;
 .terms-style{
     font-family: Roboto;
         font-weight: 400;
+        font-size: 14px;
         line-height: calc(24/14);
         letter-spacing: 0.03em;
         text-align: left;
         color: rgba(117, 117, 117, 1);
+        max-width: 400px;
+        margin-top: 20px;
+        color: var(--highlight-color);
+}
+
+.modal-terms{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-check{
+    display: none;
+
+}
+.checkbox-box{
+    width: 1.25em;
+    height: 1.25em;
+    border: 1px solid var(--text-color-default);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin-right: 9px;
+    margin-top: 25px;
+        margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ fill:transparent;
+    flex-shrink: 0;
+    width: 16px;
+    height: 15px;
+}
+.icon-check{
+    margin-top: 390px;
+    margin-left: 53px;
+
+}
+
+.checkbox-check:checked + .checkbox-box{
+    visibility: visible;
+background-color: var(--highlight-color);
+fill: var(--white-color);
+border: 1px solid var(--highlight-color);
+border-radius: 4px;
 }
