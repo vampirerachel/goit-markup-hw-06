@@ -664,8 +664,13 @@ display: flex;
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
-        padding: 15px 295px 15px 16px;
-        max-width: 359px;
+padding: 15px 15px 16px;
+    min-width: 359px;
+}
+
+.newsletter-email:hover::placeholder,
+.newsletter-email:focus::placeholder {
+    color: transparent;
 }
 .newsletter-button{
     font-family: Roboto;
@@ -684,11 +689,13 @@ display: flex;
         max-width: 200px;
 display: flex;
 align-items: center;
+
 }
 .button-icon {
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding-left: 30px;
+    margin-left: 15px;
 }
 .newsletter-button:hover,
 .newsletter-button:focus{
@@ -736,7 +743,7 @@ fill: var(--svg-color);
     position: fixed;
     width: 100vw;
     height: 100vh;
-    height: 1024px;
+
     left: 0px;
     top: 0px;
     background-color: rgba(0, 0, 0, 0.2);
@@ -780,7 +787,7 @@ fill: var(--svg-color);
     fill: var(--highlight-color);
 cursor: pointer;
 
-box-shadow: 0px 0px 15px var(--text-color-secondary)
+box-shadow: 0px 0px 15px var(--text-color-secondary);
 
 }
 .modal-text{
@@ -791,7 +798,7 @@ box-shadow: 0px 0px 15px var(--text-color-secondary)
         letter-spacing: 0.01em;
         color: var(--svg-color);
         margin-left: 40px;
-        margin-bottom: 4px;
+
 
 
     }
@@ -806,7 +813,7 @@ display: flex;
     left:0;
     transform: translateY(-50%);
     margin-left: 50px;
-    margin-top: 19px;
+    margin-top: 25px
 }
 
 #name,
@@ -821,6 +828,8 @@ display: flex;
     padding-left: 30px;
     cursor: pointer;
     margin-top: 4px;
+        padding-top: 8px;
+            padding-bottom: 8px;
 }
 #name:hover,
 #phone-number:hover,
@@ -845,12 +854,12 @@ display: flex;
 }
 .modal-form{
     position: absolute;
-    margin-top: 93px;
+    margin-top: 60px;
     left: 0;
     top: 0;
 }
 .form-title{
-    margin: 40px 40px 30px 40px;
+    margin: 40px 40px 10px 40px;
     max-width:448px;
     font-family: Roboto;
     font-weight: 700;
@@ -893,6 +902,10 @@ display: flex;
 .send-button:hover,
 .send-button:focus{
     cursor: pointer;
+box-shadow: 0px 0px 15px var(--text-color-secondary)
+}
+.send-button:active{
+    box-shadow: none;
 }
 
 /*t terms and conditions*/
@@ -904,10 +917,11 @@ display: flex;
         line-height: calc(24/14);
         letter-spacing: 0.03em;
         text-align: left;
-        color: rgba(117, 117, 117, 1);
         max-width: 400px;
-        margin-top: 20px;
-        color: var(--highlight-color);
+        margin-top: 15px;
+}
+.terms-style-link{
+    color: var(--highlight-color);
 }
 
 .modal-terms{
@@ -927,18 +941,17 @@ display: flex;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     margin-right: 9px;
-    margin-top: 25px;
-        margin-left: 50px;
+margin-top: -8px;
+    margin-left: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
  fill:transparent;
-    flex-shrink: 0;
     width: 16px;
     height: 15px;
 }
 .icon-check{
-    margin-top: 390px;
+    margin-top: 414px;
     margin-left: 53px;
 
 }
