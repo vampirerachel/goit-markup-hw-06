@@ -453,20 +453,20 @@
 								<textarea name="comments" placeholder="Enter the text" id="comments" rows="200"></textarea>
 						</label>
 			</div>
-			<div class="terms-box">
+			
+				<input type="checkbox" name="terms-and-conditions-name" id="terms-and-conditions" class="checkbox-check" />
 					<label for="terms-and-conditions" class="modal-terms">
-						<input type="checkbox" name="terms-and-conditions-name" id="terms-and-conditions" class="checkbox-check" />
-						<div class="checkbox-box">
-							<svg class="modal-svg icon-check" width="11" height="8">
+						<span class="checkbox-box">
+							<svg class="icon-check" width="11" height="8">
 								<use href="./images/sprite.svg#icon-check"></use>
 							</svg>
-						</div>
-						<span class="terms-style">I agree with the newsletter and accept the <a href="#" class="terms-style-link">Terms and Conditions</a></span>
-					</label>
-								<button type="submit" class="send-button">Send</button>
-			</div>
-		
-		</form>
+						</span>
+						<span class="checkbox-box--margin">
+						I agree with the newsletter and accept the <a href="#" class="terms-style-link">Terms and Conditions</a>
+	</label>
+					<button type="submit" class="send-button">Send</button>
+		</span>
+				</form>
 	</div>
 		</div>
 			<script src="./js/modal.js"></script>
