@@ -692,6 +692,10 @@ align-items: center;
 .newsletter-button:focus{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
+        color: green;
+            background-color: darkblue;
+            cursor: pointer;
+            transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .subscribe{
     fill: var(--white-color);
